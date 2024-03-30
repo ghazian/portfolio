@@ -1,24 +1,12 @@
-import { GlobalStyle, ThemeProvider, TaskBar } from "@react95/core";
-import { createGlobalStyle } from "styled-components";
-import { Container } from "./styles";
 import DesktopIcons from "../DesktopIcons/DesktopIcons";
+import Notepad from "../Notepad/Notepad";
 
-const BodyFontSizeOverride = createGlobalStyle`
-  body{
-    font-size: 15px
-  }
-`;
-
-const Desktop = () => {
+const Desktop = ({ selectedIcon, onIconClick }) => {
   return (
-    <Container>
-      <ThemeProvider>
-        <GlobalStyle />
-        <BodyFontSizeOverride />
-        <DesktopIcons />
-        <TaskBar />
-      </ThemeProvider>
-    </Container>
+    <>
+      <DesktopIcons onIconClick={onIconClick} />
+      <Notepad selectedIcon={selectedIcon} />
+    </>
   );
 };
 
