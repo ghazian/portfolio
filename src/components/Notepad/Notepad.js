@@ -1,21 +1,19 @@
 import { Modal, Frame } from "@react95/core";
 import { Notepad1 } from "@react95/icons";
-import { useState } from "react";
 import NotepadContent from "./NotepadContent/NotepadContent";
 
-const Notepad = ({ selectedIcon }) => {
-  const [toggleShowModal] = useState(false);
-
-  // const handleOpenModal = () => toggleShowModal(true);
-  const handleCloseModal = () => toggleShowModal(false);
+const Notepad = ({ selectedIcon, onCloseNotepad }) => {
+  const handleCloseModal = () => {
+    onCloseNotepad();
+  };
   const handleButtonClick = (e) => alert(e.currentTarget.value);
 
-  return (
+  return selectedIcon === "My Resume" ? (
     <Modal
       width={"500"}
       height={"500"}
       icon={<Notepad1 variant="16x16_4" />}
-      title="Browse"
+      title="My Resume"
       defaultPosition={{ x: 350, y: 20 }}
       closeModal={handleCloseModal}
       buttons={[
@@ -38,7 +36,7 @@ const Notepad = ({ selectedIcon }) => {
         <NotepadContent selectedIcon={selectedIcon} />
       </Frame>
     </Modal>
-  );
+  ) : null;
 };
 
 export default Notepad;
