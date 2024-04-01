@@ -1,21 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import DesktopIcons from "../DesktopIcons/DesktopIcons";
 import AboutMe from "../AboutMe/AboutMe";
 import Notepad from "../Notepad/Notepad";
 import ContactMe from "../ContactMe/ContactMe";
+import Media from "../Media/Media";
 
 const Desktop = () => {
   const [openComponents, setOpenComponents] = useState([]);
 
-  const handleIconClick = (componentName) => {
-    if (!openComponents.includes(componentName)) {
-      setOpenComponents([...openComponents, componentName]);
-    }
-  };
+  const handleIconClick = useCallback(
+    (componentName) => {
+      if (!openComponents.includes(componentName)) {
+        setOpenComponents([...openComponents, componentName]);
+      }
+    },
+    [openComponents]
+  );
 
-  const handleClose = (componentName) => {
-    setOpenComponents(openComponents.filter((name) => name !== componentName));
-  };
+  const handleClose = useCallback(
+    (componentName) => {
+      setOpenComponents(
+        openComponents.filter((name) => name !== componentName)
+      );
+    },
+    [openComponents]
+  );
 
   useEffect(() => {
     setOpenComponents(["About Me"]);
@@ -24,8 +33,10 @@ const Desktop = () => {
   return (
     <>
       <DesktopIcons onIconClick={handleIconClick} />
-      <ContactMe isOpen={openComponents.includes("Contact Me")}
-        onClose={() => handleClose("Contact Me")}/>
+      <ContactMe
+        isOpen={openComponents.includes("Contact Me")}
+        onClose={() => handleClose("Contact Me")}
+      />
       <AboutMe
         isOpen={openComponents.includes("About Me")}
         onClose={() => handleClose("About Me")}
@@ -33,6 +44,10 @@ const Desktop = () => {
       <Notepad
         isOpen={openComponents.includes("My Resume")}
         onClose={() => handleClose("My Resume")}
+      />
+      <Media
+        isOpen={openComponents.includes("Media")}
+        onClose={() => handleClose("Media")}
       />
     </>
   );
