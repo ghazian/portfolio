@@ -1,14 +1,14 @@
 import { Modal, Frame } from "@react95/core";
 import { Notepad1 } from "@react95/icons";
 
-const Notepad = ({ onClose }) => {
-  return (
+const Notepad = ({ isOpen ,onClose }) => {
+  return isOpen ? (
     <Modal
       width={"500"}
       height={"500"}
       icon={<Notepad1 variant="16x16_4" />}
       title="My Resume"
-      defaultPosition={{ x: 350, y: 20 }}
+      defaultPosition={{ x: 250, y: 20 }}
       closeModal={onClose}
       buttons={[
         { value: "Ok", onClick: onClose },
@@ -33,7 +33,7 @@ const Notepad = ({ onClose }) => {
         </div>
       </Frame>
     </Modal>
-  );
+  ): null;
 };
 
 export default Notepad;

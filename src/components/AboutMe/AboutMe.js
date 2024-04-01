@@ -2,15 +2,15 @@ import { Modal, Avatar } from "@react95/core";
 import { Drvspace7 } from "@react95/icons";
 import ProfilePicture from "../../asset/images/ProfilePicture.jpg";
 
-const AboutMe = ({ onClose }) => {
-  return (
+const AboutMe = ({ isOpen, onClose }) => {
+  return isOpen ? (
     <Modal
       width={"500"}
       height={"500"}
       icon={<Drvspace7 variant="32x32_4" />}
       title="About Me"
       closeModal={onClose}
-      defaultPosition={{ x: 150, y: 50 }}
+      defaultPosition={{ x: 350, y: 50 }}
       menu={[
         { name: "File", list: [] },
         { name: "Edit", list: [] },
@@ -35,7 +35,7 @@ const AboutMe = ({ onClose }) => {
         </p>
       </div>
     </Modal>
-  );
+  ): null;
 };
 
 export default AboutMe;

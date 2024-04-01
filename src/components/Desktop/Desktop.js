@@ -2,36 +2,38 @@ import React, { useState, useEffect } from "react";
 import DesktopIcons from "../DesktopIcons/DesktopIcons";
 import AboutMe from "../AboutMe/AboutMe";
 import Notepad from "../Notepad/Notepad";
+import ContactMe from "../ContactMe/ContactMe";
 
 const Desktop = () => {
-  const [isAboutMeOpen, setIsAboutMeOpen] = useState(true);
-  const [isNotepadOpen, setIsNotepadOpen] = useState(false);
+  const [openComponents, setOpenComponents] = useState([]);
 
   const handleIconClick = (componentName) => {
-    if (componentName === "About Me") {
-      setIsAboutMeOpen(true);
-    } else if (componentName === "My Resume") {
-      setIsNotepadOpen(true);
+    if (!openComponents.includes(componentName)) {
+      setOpenComponents([...openComponents, componentName]);
     }
   };
 
-  const handleAboutMeClose = () => {
-    setIsAboutMeOpen(false);
-  };
-
-  const handleNotepadClose = () => {
-    setIsNotepadOpen(false);
+  const handleClose = (componentName) => {
+    setOpenComponents(openComponents.filter((name) => name !== componentName));
   };
 
   useEffect(() => {
-    setIsAboutMeOpen(true);
+    setOpenComponents(["About Me"]);
   }, []);
 
   return (
     <>
       <DesktopIcons onIconClick={handleIconClick} />
-      {isAboutMeOpen && <AboutMe onClose={handleAboutMeClose} />}
-      {isNotepadOpen && <Notepad onClose={handleNotepadClose} />}
+      <ContactMe isOpen={openComponents.includes("Contact Me")}
+        onClose={() => handleClose("Contact Me")}/>
+      <AboutMe
+        isOpen={openComponents.includes("About Me")}
+        onClose={() => handleClose("About Me")}
+      />
+      <Notepad
+        isOpen={openComponents.includes("My Resume")}
+        onClose={() => handleClose("My Resume")}
+      />
     </>
   );
 };
