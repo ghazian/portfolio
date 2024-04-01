@@ -1,44 +1,37 @@
-import { useState } from "react";
-import Notepad from "../Notepad/Notepad";
-import { Icon, IconContainer } from "./styles";
-import { Awschd32402, Drvspace7, FileText, MediaCd } from "@react95/icons";
+import React, { useState, useEffect } from "react";
+import DesktopIcons from "../DesktopIcons/DesktopIcons";
 import AboutMe from "../AboutMe/AboutMe";
+import Notepad from "../Notepad/Notepad";
 
 const Desktop = () => {
-  const [selectedIcon, setSelectedIcon] = useState("");
+  const [isAboutMeOpen, setIsAboutMeOpen] = useState(true);
+  const [isNotepadOpen, setIsNotepadOpen] = useState(false);
 
-  const handleIconClick = (iconName) => {
-    setSelectedIcon(iconName);
+  const handleIconClick = (componentName) => {
+    if (componentName === "About Me") {
+      setIsAboutMeOpen(true);
+    } else if (componentName === "My Resume") {
+      setIsNotepadOpen(true);
+    }
   };
 
-  const handleClose = () => {
-    setSelectedIcon(null);
+  const handleAboutMeClose = () => {
+    setIsAboutMeOpen(false);
   };
+
+  const handleNotepadClose = () => {
+    setIsNotepadOpen(false);
+  };
+
+  useEffect(() => {
+    setIsAboutMeOpen(true);
+  }, []);
 
   return (
     <>
-      <IconContainer>
-        <Icon onClick={() => handleIconClick("My Resume")}>
-          <FileText className="pointer" variant="32x32_4" />
-          <div>My Resume</div>
-        </Icon>
-        <Icon onClick={() => handleIconClick("Media")}>
-          <MediaCd className="pointer" variant="32x32_4" />
-          <div>Media</div>
-        </Icon>
-        <Icon onClick={() => handleIconClick("About Me")}>
-          <Drvspace7 className="pointer" variant="32x32_4" />
-          <div>About Me</div>
-        </Icon>
-        <Icon onClick={() => handleIconClick("Contact Me")}>
-          <Awschd32402 className="pointer" variant="32x32_4" />
-          <div>Contact me</div>
-        </Icon>
-      </IconContainer>
-      {selectedIcon === "My Resume" && (
-        <Notepad selectedIcon={selectedIcon} onCloseNotepad={handleClose} />
-      )}
-      {selectedIcon === "About Me" && <AboutMe onClose={handleClose} />}
+      <DesktopIcons onIconClick={handleIconClick} />
+      {isAboutMeOpen && <AboutMe onClose={handleAboutMeClose} />}
+      {isNotepadOpen && <Notepad onClose={handleNotepadClose} />}
     </>
   );
 };

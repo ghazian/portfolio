@@ -1,24 +1,18 @@
 import { Modal, Frame } from "@react95/core";
 import { Notepad1 } from "@react95/icons";
-import NotepadContent from "./NotepadContent/NotepadContent";
 
-const Notepad = ({ selectedIcon, onCloseNotepad }) => {
-  const handleCloseModal = () => {
-    onCloseNotepad();
-  };
-  const handleButtonClick = (e) => alert(e.currentTarget.value);
-
-  return selectedIcon === "My Resume" ? (
+const Notepad = ({ onClose }) => {
+  return (
     <Modal
       width={"500"}
       height={"500"}
       icon={<Notepad1 variant="16x16_4" />}
       title="My Resume"
       defaultPosition={{ x: 350, y: 20 }}
-      closeModal={handleCloseModal}
+      closeModal={onClose}
       buttons={[
-        { value: "Ok", onClick: handleButtonClick },
-        { value: "Cancle", onClick: handleButtonClick },
+        { value: "Ok", onClick: onClose },
+        { value: "Cancel", onClick: onClose },
       ]}
       menu={[
         { name: "File", list: [] },
@@ -33,10 +27,13 @@ const Notepad = ({ selectedIcon, onCloseNotepad }) => {
         padding="0px 5px"
         style={{ overflowY: "auto" }}
       >
-        <NotepadContent selectedIcon={selectedIcon} />
+        <div>
+          <h1>My Resume!</h1>
+          This is the content for My Resume.
+        </div>
       </Frame>
     </Modal>
-  ) : null;
+  );
 };
 
 export default Notepad;

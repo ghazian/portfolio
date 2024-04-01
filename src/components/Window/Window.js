@@ -1,6 +1,7 @@
-import { GlobalStyle, ThemeProvider, TaskBar } from "@react95/core";
+import { GlobalStyle, ThemeProvider } from "@react95/core";
 import { createGlobalStyle } from "styled-components";
 // import { Container } from "./styles";
+import { TaskBar } from "@react95/core";
 import Desktop from "../Desktop/Desktop";
 
 const BodyFontSizeOverride = createGlobalStyle`

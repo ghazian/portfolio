@@ -8,9 +8,9 @@ const AboutMe = ({ onClose }) => {
       width={"500"}
       height={"500"}
       icon={<Drvspace7 variant="32x32_4" />}
-      title="My Resume"
+      title="About Me"
       closeModal={onClose}
-      defaultPosition={{ x: 350, y: 20 }}
+      defaultPosition={{ x: 150, y: 50 }}
       menu={[
         { name: "File", list: [] },
         { name: "Edit", list: [] },
