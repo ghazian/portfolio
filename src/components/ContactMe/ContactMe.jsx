@@ -37,7 +37,7 @@ const ContactMe = ({ isOpen, onClose }) => {
               }}
             >
               <a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/in/ghazian"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{

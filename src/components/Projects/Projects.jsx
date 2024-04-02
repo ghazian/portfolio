@@ -150,6 +150,7 @@ const Projects = ({ isOpen, onClose }) => {
           <p>
             Tech Stack: <FaReact /> React, WebAmp
           </p>
+          <a href="https://github.com/ghazian/portfolio">Link</a>
           <hr />
         </div>
       </Frame>
