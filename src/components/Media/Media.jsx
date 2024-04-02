@@ -27,18 +27,36 @@ const Media = ({ isOpen, onClose }) => {
         });
 
         webampRef.current = webamp;
+        webampRef.current.renderWhenReady(containerRef.current);
       }
-
-      webampRef.current.renderWhenReady(containerRef.current);
     } else {
       if (webampRef.current) {
         webampRef.current.dispose();
         webampRef.current = null;
       }
     }
+
+    return () => {
+      if (webampRef.current) {
+        webampRef.current.dispose();
+        webampRef.current = null;
+      }
+    };
   }, [isOpen, onClose]);
 
-  return <div ref={containerRef} id="winamp-container" />;
+  return (
+    <div
+      style={{
+        position: "fixed",
+        bottom: "11.5%",
+        left: "0",
+        transform: "translate(10px, -100px)",
+        zIndex: 9999,
+      }}
+    >
+      <div ref={containerRef} id="winamp-container" />
+    </div>
+  );
 };
 
 export default Media;

@@ -1,6 +1,12 @@
 import React from "react";
 import { Icon, IconContainer } from "./styles";
-import { Awschd32402, Drvspace7, FileText, MediaCd } from "@react95/icons";
+import {
+  Awschd32402,
+  Drvspace7,
+  FileText,
+  MediaCd,
+  Explorer100,
+} from "@react95/icons";
 
 const DesktopIcons = ({ onIconClick }) => {
   const icons = [
@@ -8,6 +14,7 @@ const DesktopIcons = ({ onIconClick }) => {
     { name: "Media", icon: MediaCd },
     { name: "About Me", icon: Drvspace7 },
     { name: "Contact Me", icon: Awschd32402 },
+    { name: "Projects", icon: Explorer100 },
   ];
 
   return (

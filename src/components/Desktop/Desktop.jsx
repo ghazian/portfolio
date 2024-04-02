@@ -4,6 +4,7 @@ import AboutMe from "../AboutMe/AboutMe";
 import Notepad from "../Notepad/Notepad";
 import ContactMe from "../ContactMe/ContactMe";
 import Media from "../Media/Media";
+import Projects from "../Projects/Projects";
 
 const Desktop = () => {
   const [openComponents, setOpenComponents] = useState([]);
@@ -48,6 +49,10 @@ const Desktop = () => {
       <Media
         isOpen={openComponents.includes("Media")}
         onClose={() => handleClose("Media")}
+      />
+      <Projects
+        isOpen={openComponents.includes("Projects")}
+        onClose={() => handleClose("Projects")}
       />
     </>
   );
