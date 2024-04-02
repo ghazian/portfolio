@@ -1,6 +1,5 @@
 import { GlobalStyle, ThemeProvider } from "@react95/core";
 import { createGlobalStyle } from "styled-components";
-// import { Container } from "./styles";
 import { TaskBar } from "@react95/core";
 import Desktop from "../Desktop/Desktop";
 

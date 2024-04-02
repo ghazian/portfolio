@@ -24,7 +24,7 @@ const Notepad = ({ isOpen, onClose }) => {
         h={400}
         boxShadow="in"
         bg="white"
-        padding="0px 5px"
+        padding="0px 15px"
         style={{ overflowY: "auto" }}
       >
         <div>
@@ -96,6 +96,12 @@ const Notepad = ({ isOpen, onClose }) => {
               ofmanual reporting work.
             </li>
           </ul>
+          <hr />
+          <h2>Education</h2>
+          <h4>Master of Science in Computer Science</h4>
+          <p>University of Glasgow | 2:1 Merit | Jan 2021 - Jan 2022</p>
+          <h4>Bachelor of Science in Computer Science</h4>
+          <p>University of Binus | 2:1 Merit | Sept 2015 - Jan 2020</p>
         </div>
       </Frame>
     </Modal>
