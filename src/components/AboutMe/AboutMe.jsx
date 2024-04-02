@@ -6,7 +6,7 @@ const AboutMe = ({ isOpen, onClose }) => {
   return isOpen ? (
     <Modal
       width={"500"}
-      height={"730"}
+      height={"630"}
       icon={<Drvspace7 variant="32x32_4" />}
       title="About Me"
       closeModal={onClose}
@@ -18,7 +18,7 @@ const AboutMe = ({ isOpen, onClose }) => {
     >
       <Frame
         w={"100%"}
-        h={650}
+        h={550}
         boxShadow="in"
         padding="0px 5px"
         style={{
