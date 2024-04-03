@@ -2,7 +2,7 @@ import { GlobalStyle, ThemeProvider } from "@react95/core";
 import { createGlobalStyle } from "styled-components";
 import { TaskBar } from "@react95/core";
 import Desktop from "../Desktop/Desktop";
-import { Analytics } from "@vercel/analytics";
+import { Analytics } from "@vercel/analytics/react";
 
 const BodyFontSizeOverride = createGlobalStyle`
   body{
