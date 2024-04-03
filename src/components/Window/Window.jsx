@@ -2,6 +2,7 @@ import { GlobalStyle, ThemeProvider } from "@react95/core";
 import { createGlobalStyle } from "styled-components";
 import { TaskBar } from "@react95/core";
 import Desktop from "../Desktop/Desktop";
+import { Analytics } from "@vercel/analytics";
 
 const BodyFontSizeOverride = createGlobalStyle`
   body{
@@ -16,6 +17,7 @@ const Window = () => {
       <BodyFontSizeOverride />
       <Desktop />
       <TaskBar />
+      <Analytics />
     </ThemeProvider>
   );
 };
