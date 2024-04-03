@@ -31,24 +31,43 @@ const AboutMe = ({ isOpen, onClose }) => {
         <div style={{ marginTop: "20px" }}>
           <Avatar src={ProfilePicture4} size={200} circle />
         </div>
-        <h1>Hey I'm Ghaz!</h1>
+        <h1>Hey, I'm Ghaz!</h1>
         <p>
-          I'm a<strong> Software Engineer</strong>, professional SE for 2+ years
-          and a hobbiest for 14+ years! I've grown my love for tech since middle
-          school when I broke my very first laptop... I looked into the
-          components and that got me into hardware, but later discovered the
-          software side and fell in love with it! I've made a Computer Club way
-          back in secondary education (age 13) and got people including my
-          friends into programming!
+          I'm a <strong>Software Engineer</strong> with over 2 years of
+          professional experience and 14+ years as a hobbyist. My love for
+          technology began in middle school when I accidentally broke my first
+          laptop. As I delved into its components, I discovered a fascination
+          for hardware. However, I later found my true passion in software
+          development and fell in love with it!
         </p>
         <p>
-          Aside from that, I love hiking (beat Ben Nevis!), I can speak 4
-          languages, 🇬🇧 English and 🇮🇩 Indonesian as a native language and 🇮🇹
-          Italian and 🇫🇷 France as a professional literacy. I'm also an avid
-          cook! I love cooking dishes from around the world, I've explored
-          Asian, British, and Italian cuisines, and currently exploring Eastern
-          European!
+          Back in secondary school (at the age of 13), I founded a Computer Club
+          and introduced programming to my friends and classmates. It was an
+          exciting opportunity to share my enthusiasm for technology with
+          others.
         </p>
+        <p>
+          Apart from my technical pursuits, I have a diverse range of interests:
+        </p>
+        <ul>
+          <li>
+            I love hiking and even conquered Ben Nevis, the highest mountain in
+            the British Isles!
+          </li>
+          <li>
+            I am multilingual and can speak 4 languages:
+            <ul>
+              <li>🇬🇧 English (native)</li> <li>🇮🇩 Indonesian (native)</li>
+              <li>🇮🇹 Italian (professional proficiency)</li>
+              <li>🇫🇷 French (professional proficiency)</li>
+            </ul>
+          </li>
+          <li>
+            I am an avid cook and enjoy exploring cuisines from around the
+            world. I've delved into Asian, British, and Italian dishes, and I'm
+            currently venturing into Eastern European flavors!
+          </li>
+        </ul>
       </Frame>
     </Modal>
   ) : null;
