@@ -1,5 +1,6 @@
-import { Modal, Frame } from "@react95/core";
+import { Modal, Frame, Button } from "@react95/core";
 import { Notepad1 } from "@react95/icons";
+import CV from "../../asset/CV/Ghazian_Azfar_CV.pdf";
 
 const Notepad = ({ isOpen, onClose }) => {
   return isOpen ? (
@@ -102,6 +103,13 @@ const Notepad = ({ isOpen, onClose }) => {
           <p>University of Glasgow | 2:1 Merit | Jan 2021 - Jan 2022</p>
           <h4>Bachelor of Science in Computer Science</h4>
           <p>University of Binus | 2:1 Merit | Sept 2015 - Jan 2020</p>
+          <div style={{ paddingTop: "10px", paddingBottom: "10px" }}>
+            <Button>
+              <a href={CV} download="Ghazian_Azfar_CV.pdf">
+                Download Resume
+              </a>
+            </Button>
+          </div>
         </div>
       </Frame>
     </Modal>
