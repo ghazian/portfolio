@@ -1,13 +1,11 @@
-import { TaskBar, List, Modal } from "@react95/core";
-import { ReaderClosed, WindowsExplorer } from "@react95/icons";
+import { TaskBar, List, Modal, Frame } from "@react95/core";
+import { WindowsExplorer } from "@react95/icons";
 import { useState } from "react";
 
 const Taskbar = () => {
   const [first, toggleFirst] = useState(false);
-  const [second, toggleSecond] = useState(false);
 
   const closeFirst = () => toggleFirst(false);
-  const closeSecond = () => toggleSecond(false);
 
   return (
     <>
@@ -18,29 +16,29 @@ const Taskbar = () => {
           closeModal={closeFirst}
           width="300"
           height="200"
-        />
-      )}
-
-      {second && (
-        <Modal
-          defaultPosition={{ x: 50, y: 50 }}
-          width="300"
-          height="200"
-          icon={<ReaderClosed variant="16x16_4" />}
-          title="Local Disk (C:)"
-          closeModal={closeSecond}
-        />
+        >
+          <Frame
+            w={"100%"}
+            h={100}
+            boxShadow="in"
+            bg="white"
+            padding="0px 15px"
+            style={{ overflowY: "auto" }}
+          >
+            The world is beautiful
+          </Frame>
+        </Modal>
       )}
 
       <TaskBar
         list={
           <List>
-            <List.Item
+            {/* <List.Item
               icon={<ReaderClosed variant="32x32_4" />}
               onClick={() => toggleSecond(true)}
             >
               About Me (C:)
-            </List.Item>
+            </List.Item> */}
             <List.Item
               icon={<WindowsExplorer variant="32x32_4" />}
               onClick={() => {
