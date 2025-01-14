@@ -36,6 +36,12 @@ const Notepad = ({ isOpen, onClose }) => {
 					<p>JULY 2022 - PRESENT</p>
 					<ul>
 						<li>
+							Developed and maintained a real-time, data-driven web platform
+							showcasing over 1000+ live sports events globally. Designed
+							scalable solutions utilizing WebSockets for low-latency updates
+							and REST APIs for data retrieval.
+						</li>
+						<li>
 							Introduced design principles to create reusable components,
 							ensuring consistent UI/UX design standards across 2 product lines.
 							This improved the overall design and made it easy for team members
@@ -48,18 +54,13 @@ const Notepad = ({ isOpen, onClose }) => {
 							externally.
 						</li>
 						<li>
-							Successfully implemented Redis as an in-memory caching solution
-							for heavy API calls, reducing response times by up to 200%.
-						</li>
-						<li>
 							Facilitated onboarding of graduates into the team and up-skilling
 							through mentor buddy program.
 						</li>
 						<li>
-							Implemented state management in our React application to
-							streamline network performance, resulting in a 40% decrease in
-							latency across thousands of WebSocket messages, GraphQL and REST
-							API integrations, ensuring a seamless user experience.
+							Successfully implemented and deployed Redis as an in-memory
+							caching solution for heavy API calls and PostgreSQL for static
+							data reducing response times by up to 200%.
 						</li>
 					</ul>
 					<br />
@@ -103,6 +104,11 @@ const Notepad = ({ isOpen, onClose }) => {
 					<p>University of Glasgow | 2:1 Merit | Jan 2021 - Jan 2022</p>
 					<h4>Bachelor of Science in Computer Science</h4>
 					<p>University of Binus | 2:1 Merit | Sept 2015 - Jan 2020</p>
+					<h4>High School</h4>
+					<p>
+						SMAN 68 | A Levels: A*A*A*AA (Math, Bio, Chem, Eng, Physics) | Sept
+						2015 - Jan 2020
+					</p>
 					<div style={{ paddingTop: "10px", paddingBottom: "10px" }}>
 						<Button>
 							<a href={CV} download="Ghazian_Azfar_CV.pdf">
