@@ -1,6 +1,6 @@
 import { Modal, Avatar, Frame } from "@react95/core";
 import { Drvspace7 } from "@react95/icons";
-import ProfilePicture4 from "../../asset/images/ProfilePicture4.jpg";
+import ProfilePicture5 from "../../asset/images/ProfilePicture5.jpg";
 
 const AboutMe = ({ isOpen, onClose }) => {
 	return isOpen ? (
@@ -29,11 +29,11 @@ const AboutMe = ({ isOpen, onClose }) => {
 				}}
 			>
 				<div style={{ marginTop: "20px" }}>
-					<Avatar src={ProfilePicture4} size={200} circle />
+					<Avatar src={ProfilePicture5} size={200} circle />
 				</div>
 				<h1>Hey, I'm Ghaz!</h1>
 				<p>
-					I'm a <strong>Software Engineer</strong> with over 2 years of
+					I'm a <strong>Software Engineer</strong> with over 3 years of
 					professional experience and 14+ years as a hobbyist. My love for
 					technology started in middle school when I accidentally broke my first
 					laptop. I delved into its components, I discovered a fascination for
@@ -41,13 +41,13 @@ const AboutMe = ({ isOpen, onClose }) => {
 					development and fell in love with it!
 				</p>
 				<p>
-					Back in secondary school (at the age of 13), I founded a Computer Club
-					and introduced programming to my friends and classmates. It was an
+					At the age of 13, I founded a Computer Club in secondary school,
+					introducing programming to my friends and classmates. It was an
 					exciting opportunity to share my enthusiasm for technology with
 					others.
 				</p>
 				<p>
-					Apart from my technical pursuits, I have a diverse range of interests:
+					Along with my technical pursuits, I have a diverse range of interests:
 				</p>
 				<ul>
 					<li>

@@ -37,7 +37,7 @@ const Notepad = ({ isOpen, onClose }) => {
 					<ul>
 						<li>
 							Developed and maintained a real-time, data-driven web platform
-							showcasing over 1000+ live sports events globally. Designed
+							showcasing over 65,000+ live sports events globally. Designed
 							scalable solutions utilizing WebSockets for low-latency updates
 							and REST APIs for data retrieval.
 						</li>
